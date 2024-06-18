@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Profesores</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/logo.png" alt="Logo Universidad del Pueblo">
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro_profesores.html">Registro de Profesores</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="registro_estudiantes.html">Registro de Estudiantes</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Registro de Profesores</h1>
+            <p>Por favor, complete el siguiente formulario para registrar a un nuevo profesor.</p>
+            <form action="RegistroProfesoresServlet" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
+
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required><br>
+
+                <label for="materia">Materia que dicta:</label>
+                <input type="text" id="materia" name="materia" required><br>
+
+                <label for="centro">Centro Regional donde labora:</label>
+                <select id="centro" name="centro" required>
+                    <option value="Panamá">Panamá</option>
+                    <option value="Coclé">Coclé</option>
+                    <option value="Colón">Colón</option>
+                    <option value="Veraguas">Veraguas</option>
+                    <option value="Los Santos">Los Santos</option>
+                    <option value="Bocas del Toro">Bocas del Toro</option>
+                    <option value="Chiriquí">Chiriquí</option>
+                </select><br>
+
+                <label for="experiencia">¿Tiene experiencia en clases virtuales?</label>
+                <input type="radio" id="si" name="experiencia" value="SI" required> Sí
+                <input type="radio" id="no" name="experiencia" value="NO"> No<br>
+
+                <button type="submit">Registrar</button>
+            </form>
+            <p id="confirmation"></p>
+            <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro_profesores.html">Registro de Profesores</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="registro_estudiantes.html">Registro de Estudiantes</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2023 Universidad del Pueblo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

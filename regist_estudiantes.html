@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/logo.png" alt="Logo Universidad del Pueblo">
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro_profesores.html">Registro de Profesores</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="registro_estudiantes.html">Registro de Estudiantes</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Registro de Estudiantes</h1>
+            <p>Por favor, complete el siguiente formulario para registrar a un nuevo estudiante.</p>
+            <form action="RegistroEstudiantesServlet" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
+
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required><br>
+
+                <label for="año">Año lectivo:</label>
+                <input type="text" id="año" name="año" required><br>
+
+                <label for="centro">Centro Regional donde labora:</label>
+                <select id="centro" name="centro" required>
+                    <option value="Panamá">Panamá</option>
+                    <option value="Coclé">Coclé</option>
+                    <option value="Colón">Colón</option>
+                    <option value="Veraguas">Veraguas</option>
+                    <option value="Los Santos">Los Santos</option>
+                    <option value="Bocas del Toro">Bocas del Toro</option>
+                    <option value="Chiriquí">Chiriquí</option>
+                </select><br>
+
+                <label for="cursos">Cursos a los que desea ingresar:</label>
+                <select id="cursos" name="cursos" required>
+                    <option value="Soldadura">Soldadura</option>
+                    <option value="Electrónica">Electrónica</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="Programación">Programación</option>
+                </select><br>
+
+                <label for="indice">Índice:</label>
+                <input type="text" id="indice" name="indice" required><br>
+
+                <button type="submit">Registrar</button>
+            </form>
+            <p id="confirmation"></p>
+            <button onclick="window.location.href='index.html'">Volver al Inicio</button>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="registro_profesores.html">Registro de Profesores</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="registro_estudiantes.html">Registro de Estudiantes</a></li>
+                <li><a href="soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2023 Universidad del Pueblo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
